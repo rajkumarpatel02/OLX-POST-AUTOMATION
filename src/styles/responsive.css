@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    .app-main {
+        flex-direction: column;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .preview-panel {
+        position: static;
+        margin-top: 2rem;
+    }
+}

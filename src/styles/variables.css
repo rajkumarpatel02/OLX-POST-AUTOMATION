@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #002f34;
+  --secondary-color: #23e5db;
+  --text-color: #002f34;
+  --text-light: #7f9799;
+  --background-color: #f2f4f5;
+  --white: #ffffff;
+  --error-color: #ff5636;
+  --border-color: #d8dfe0;
+  --shadow-sm: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --font-family: 'Roboto', sans-serif;
+}

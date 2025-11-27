@@ -1,0 +1,25 @@
+.copy-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.copy-button:hover {
+    background-color: #00424a;
+}
+
+.copy-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.copy-button.copied {
+    background-color: #28a745;
+}
