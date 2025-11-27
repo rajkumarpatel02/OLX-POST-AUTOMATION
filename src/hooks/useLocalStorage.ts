@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 
-export function useLocalStorage<T>(key: string, initialValue: T) {
+export function useLocalStorage<T>(key: string, initialValue: T, sanitizer?: (value: T) => T) {
     const [storedValue, setStoredValue] = useState<T>(() => {
         try {
             const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : initialValue;
+            const parsed = item ? JSON.parse(item) : initialValue;
+            return sanitizer ? sanitizer(parsed) : parsed;
         } catch (error) {
             console.error(error);
             return initialValue;

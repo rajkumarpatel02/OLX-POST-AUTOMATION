@@ -5,7 +5,10 @@ import { DEFAULT_FORM_VALUES } from '../utils/constants';
 import { useLocalStorage } from './useLocalStorage';
 
 export const useForm = () => {
-    const [formData, setFormData] = useLocalStorage<ListingFormData>('olx_listing_data', DEFAULT_FORM_VALUES);
+    const [formData, setFormData] = useLocalStorage<ListingFormData>('olx_listing_data', DEFAULT_FORM_VALUES, (data) => ({
+        ...data,
+        photos: []
+    }));
     const [errors, setErrors] = useState<FormErrors>({});
     const [isValid, setIsValid] = useState(false);
 
